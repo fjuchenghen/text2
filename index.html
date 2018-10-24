@@ -5,12 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Parallax</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link href="css/lightbox.min.css" rel="stylesheet">
     
+
+    <title>Rusume</title>
+
 
 
 
     <style>
+        * {
+            font-family: 'Microsoft JhengHei';
+        }
+
         body {
             margin: 0;
         }
@@ -22,6 +33,7 @@
             background-size: cover;
             background-position: center;
 
+
             background-attachment: fixed;
         }
 
@@ -30,23 +42,26 @@
             top: 50%;
             left: 0;
             width: 100%;
-            height: 100px;
-            font-size: 40px;
+            height: 200px;
+            font-size: 80px;
             text-align: center;
             color: rgb(255, 255, 255);
-            background-color: rgba(73, 39, 0, 0.199);
+            background-color: rgba(19, 14, 14, 0.37);
             transform: translateY(-50%);
+
+            margin-bottom: 100px;
         }
 
         .imgLink {
             position: absolute;
-            top: 53%;
+            top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
 
+
         }
 
-        a {
+        .a1 {
             color: rgb(255, 255, 255);
             font-size: 26px;
             text-decoration: none;
@@ -56,7 +71,7 @@
             padding: 0 5px;
         }
 
-        a:hover {
+        .a1:hover {
             background-color: rgba(255, 255, 255, 0.521);
             color: black;
             border-color: black;
@@ -91,12 +106,12 @@
             left: 0%;
             transform: translateY(-50%);
             width: 100%;
-            height: 300px;
-            font-size: 40px;
+            height: 120px;
+            font-size: 28px;
             text-align: center;
-            line-height: 300px;
-            color: rgb(255, 255, 255); 
-            background-color: rgba(190, 114, 0, 0.253);
+            line-height: 120px;
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 108, 180, 0.253);
         }
 
         .parallax-img3 {
@@ -114,9 +129,9 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 130px;
-            height: 50px;
-            font-size: 40px;
+            /* width: 130px; */
+            height: 55px;
+            font-size: 28px;
             text-align: center;
             color: rgb(255, 255, 255);
             transform: translate(-50%, -50%);
@@ -134,171 +149,324 @@
             border: 1.5px dashed rgb(0, 0, 0);
             border-radius: 50%;
             padding: 10px;
+            transition: 0.5s;
 
         }
+
+        #BackToTop:hover {
+            transform: scale(1.4);
+            border: 3px solid rgb(0, 0, 0);
+            background-color: rgb(255, 130, 46);
+        }
+
+        .Img1 {
+            width: 80px;
+            height: 200px;
+            background-image: url('img/2018-09-03-AI-不二拉麵Mockup預覽圖V2_工作區域 1.jpg');
+            background-position: 35% 29%;
+
+        }
+
+        .Img2 {
+            width: 80px;
+            height: 250px;
+            background-image: url('img/2018-09-04-AI-何誼珍美容名片-預覽圖V3_工作區域 1.jpg');
+            background-position: 27% -59%;
+
+        }
+
+        .Img3 {
+            width: 80px;
+            height: 300px;
+            background-image: url('img/BlackHoleThink預覽圖V2.jpg');
+            background-position: 30% -104%;
+        }
+
+        .Img4 {
+            width: 80px;
+            height: 250px;
+            background-image: url('img/2018-09-07-AI-武陵農場DM-V2-正.jpg');
+            background-position: 50% 40%;
+        }
+
+        .Img5 {
+            width: 80px;
+            height: 200px;
+            background-image: url('img/2018-09-07-AI-武陵農場DM-V2-反.jpg');
+            background-position: center right;
+        }
+
+        .imgs1{
+            transition: 0.3s;
+        }
+        .imgs1:hover{
+            transform: scale(1.2);
+        }
+
+        .flex-2{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            transition: 0.3s;
+        }
+
+        .flex-2:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .round{
+            width: 30px;
+            height: 30px;
+            background-color: rgb(223, 39, 39);
+            border-radius: 50%;
+            margin: 5px;
+        }
+
+        .no_round{
+            width: 30px;
+            height: 30px;
+            /* background-color: rgb(223, 39, 39); */
+            border-radius: 50%;
+            border: 1px solid rgb(223,39,39);
+            margin: 5px;
+        }
+
     </style>
 
 </head>
 
 <body>
     <div class="parallax-img">
-        <div class="textImg">Scroll Down</div>
+        <div class="textImg">Hello!!</div>
         <div class="imgLink">
-            <a href="#secion1">Link1</a>
-            <a href="#secion2">Link2</a>
-            <a href="#secion3">Link3</a>
+            <a class="a1" href="#secion1">關於我</a>
+            <a class="a1" href="#secion2">技能</a>
+            <a class="a1" href="#secion3">設計練習</a>
+            <a class="a1" href="#secion4">程式練習</a>
         </div>
-
     </div>
+
+
+
 
     <div id="secion1">
-        <h1>Title1</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eligendi voluptatibus iusto distinctio
-            repudiandae aut aspernatur laudantium! Repellendus unde tenetur possimus magni aliquam enim, harum quod
-            iure id
-            sit, ea dolorum dolore quisquam quo? Asperiores tempore debitis nostrum aperiam illum deleniti ipsam
-            officia!
-            Optio iusto voluptatibus, eaque aperiam non laborum aliquid reiciendis labore? Id molestiae illum nemo in
-            quam
-            dolor nulla deserunt! Doloribus odio similique ipsum modi officiis voluptates! Consectetur enim similique,
-            velit repellendus cumque tempore dignissimos et voluptatum explicabo a, rem accusantium autem ab magni
-            commodi.
-            Eos corrupti consectetur nostrum ut expedita ad, minus quaerat, placeat explicabo ullam, soluta eum nihil
-            asperiores laborum exercitationem possimus animi dolorem? Consequatur, vitae vero voluptate quidem facilis
-            nisi
-            quae temporibus. Quod aperiam odio sit ipsa magnam? Possimus aliquid saepe voluptates placeat perspiciatis
-            dolor? A ipsa, natus adipisci harum itaque autem delectus voluptas asperiores labore sed quas vitae est, ut
-            distinctio. Architecto dolore sunt minima dicta enim magnam rem beatae, inventore provident odio maxime
-            eveniet
-            quisquam eos ipsam, fuga explicabo amet officia molestiae iste sed? Quia voluptatibus, reiciendis eum
-            quidem
-            exercitationem, et rerum recusandae dignissimos commodi error deleniti. Accusamus, recusandae dolor quos
-            animi
-            cum voluptatibus blanditiis assumenda adipisci ab error reiciendis doloremque deserunt mollitia tenetur
-            architecto nobis reprehenderit aliquid rem accusantium itaque maxime ex? Dolorem quia illum odit tempore
-            vitae,
-            voluptas facere rem debitis vero! Dolorum voluptate sint amet illo neque atque dolores eius velit, hic iste
-            fugit recusandae ea rerum quos quibusdam saepe consequatur vitae quaerat! Nemo ipsa nam sit vitae, atque
-            vero
-            distinctio explicabo, saepe inventore ipsam nulla pariatur excepturi quisquam. Nulla culpa unde provident.
-            Provident asperiores officiis ipsum minima error incidunt harum voluptates necessitatibus ab atque placeat
-            voluptas non exercitationem ratione fuga dolores, esse enim officia quia? Perspiciatis incidunt tenetur
-            iure
-            quasi vel necessitatibus quis, dignissimos, vero ex fuga, eveniet voluptas!</p>
+        <div class="container py-5">
+            <div class="justify-content-center">
+                <h1>關於我</h1>
+                <p>
+                    <h2 style="text-align:center;margin-bottom: 50px;">Hi，我的名字叫吳承翰，目前住在台中市豐原區。</h2>
+                    <h3 style="text-align:center;line-height: 50px">
+                        因緣際會之下，參加上益資訊顧問公司所辦理的 RWD 網頁人才培訓職訓，希望能夠從頭學起，把網頁相關技術爬梳統整，鞏固基礎並做中學，期許自己成為一位出色的前端設計工程師。
+                    </h3>
+                </p>
+            </div>
 
-    </div>
-
-    <div class="parallax-img2">
-        <div class="textImg2">COOL</div>
+        </div>
     </div>
 
     <div id="secion2">
-        <h1>Title2</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, quidem facilis voluptate perspiciatis
-            dignissimos asperiores neque cumque error expedita. Iste quam voluptate, eligendi neque doloremque
-            accusantium
-            vero quidem voluptas suscipit sapiente! Sint quos eaque quisquam eligendi totam assumenda sit, magni unde
-            soluta similique esse sapiente labore quia aspernatur quas officiis suscipit quod consequatur perspiciatis
-            facilis maiores ipsum fugiat modi? Ipsa asperiores nobis error quos aperiam tenetur suscipit atque
-            molestias,
-            incidunt autem ratione consequuntur voluptates voluptatibus maxime mollitia saepe expedita! Inventore
-            repellendus rem ipsum eaque iusto hic beatae maiores quo. Tempora rerum officia illo quod debitis velit,
-            ipsum
-            aut non perferendis, accusantium provident, assumenda quam mollitia facere natus? Reprehenderit fugit dicta
-            quae odit sapiente? Nisi adipisci neque, cumque quas voluptatibus deleniti voluptas nulla fugiat quis sint
-            temporibus ipsam beatae doloribus, hic nesciunt, illo repellendus at obcaecati molestias accusamus nemo
-            est.
-            Quasi exercitationem deleniti ea atque obcaecati nisi possimus impedit laborum quo, est dolores, quisquam
-            natus
-            dolore tempore id nobis quaerat quibusdam harum officiis, minima necessitatibus sed. Adipisci illo tenetur
-            cupiditate deserunt incidunt libero a ipsam obcaecati velit consequuntur itaque quidem vitae illum
-            consectetur
-            facere in officiis animi, veritatis architecto omnis dolore perspiciatis. Labore magni perspiciatis
-            sapiente
-            distinctio aperiam, sequi a? Quisquam?</p>
+        <div class="container py-5">
+            <h1 style="margin-bottom: 30px;">技能</h1>
+            <div class="d-flex justify-content-center align-items-center">
+                <h3>HTML</h3>
+                <div class="d-flex">
+                    <div class="round"></div>
+                    <div class="round"></div>
+                    <div class="round"></div>
+                    <div class="round"></div>
+                    <div class="no_round"></div>
+                </div>
+                
+                
+            </div>
+            
+            <div class="d-flex justify-content-center align-items-center">
+                <h3>CSS</h3>
+                <div style="margin-left: 25px;" class="d-flex">
+                    <div class="round"></div>
+                    <div class="round"></div>
+                    <div class="round"></div>
+                    <div class="no_round"></div>
+                    <div class="no_round"></div>
+                </div>
+                
+            </div>
+            
+            <div class="d-flex justify-content-center align-items-center">
+                <h3>JS</h3>
+                <div style="margin-left: 50px;" class="d-flex">
+                    <div class="round"></div>
+                    <div class="round"></div>
+                    <div class="no_round"></div>
+                    <div class="no_round"></div>
+                    <div class="no_round"></div>
+                </div>
+                
+            </div>
+            
+            <br>
 
+            <div style="width: 40%;margin: 0 auto;" class="justify-content-center">
+                <h3 style="text-align:center">Github</h3>
+                <span>會用圖形化界面來操作GitHub Desktop用 commit & sync。</span>
+            </div>
+            
+        </div>
     </div>
 
-    <div class="parallax-img3">
-        <div class="textImg3">Perfect</div>>
+    <div class="parallax-img2">
+        <div class="textImg2">即便是聽不見，總該會有一道門隨時開著的！</div>
     </div>
 
     <div id="secion3">
-        <h1>Title3</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam autem in eum quae unde, debitis veritatis.
-            Minima, consectetur a illum veniam ad totam quidem explicabo ipsum fuga libero perferendis enim nobis,
-            architecto voluptatum unde nisi vero consequuntur exercitationem sit nam corporis? Odio quasi, corrupti id
-            culpa laudantium ea dolor harum praesentium dolores nemo placeat totam quam nisi quisquam. Neque culpa et
-            repudiandae nihil placeat numquam ducimus delectus corporis quidem quas aliquam quis error, inventore amet.
-            Dolorem eligendi ratione modi et magnam animi earum. Architecto est temporibus nisi impedit obcaecati error
-            neque explicabo, nobis mollitia repellat? Temporibus architecto suscipit, nisi fugiat dignissimos, facilis
-            accusamus nulla tempore non necessitatibus, eveniet officiis reiciendis! In, perferendis adipisci magni
-            illo sunt temporibus nostrum ratione maxime quisquam sit natus cum voluptatem earum labore ipsa aspernatur
-            quis ad nam possimus perspiciatis corporis provident rerum quibusdam repellat. Voluptatum aut ducimus
-            reprehenderit corporis rerum velit aperiam quia suscipit consectetur natus illo est quaerat, ipsam ratione
-            maxime voluptate delectus harum dolore eveniet, optio temporibus deleniti incidunt unde beatae. Veritatis
-            sit quia odio aut ea, provident, dignissimos quas expedita distinctio eligendi ducimus qui consequatur
-            earum dolorem totam, veniam similique illum! Tempora atque magnam tenetur porro, expedita iure, eveniet
-            rerum quasi libero reiciendis blanditiis sequi! Quidem voluptate officiis tenetur quia maiores ratione
-            possimus fuga, quos dicta ipsa eius commodi, hic eveniet id? Architecto beatae cumque odio ad a saepe
-            accusamus provident facilis autem, incidunt rem doloribus natus quo at sint. Maxime unde ratione molestiae
-            ab reiciendis blanditiis ipsum ipsa facere aliquam deleniti quisquam, optio ducimus sed debitis nemo!
-            Sapiente maxime placeat ad inventore numquam tempore magnam! Ea voluptatem laborum libero velit enim
-            voluptas pariatur ratione aliquam totam, ipsam cupiditate molestias, sit quod laboriosam culpa voluptates
-            eius tempora sed ducimus ab illo consequuntur modi repellat adipisci. Praesentium, dolores obcaecati, nam
-            accusamus earum vitae et laudantium tempore repellendus sequi dolor veniam at aliquam repudiandae, modi
-            veritatis. Quaerat, deserunt blanditiis eveniet cupiditate commodi exercitationem distinctio nostrum eos
-            labore esse quasi sint repellat voluptate explicabo, similique quam beatae nulla harum corporis, libero
-            accusamus cum temporibus? Natus nobis architecto quasi debitis excepturi enim illo nesciunt inventore
-            consequatur? Et veniam alias quisquam deserunt, maiores sapiente reprehenderit illo nisi eveniet repellat
-            nostrum ipsa possimus dolor. Tempora soluta cupiditate et temporibus laborum ratione possimus dolorem iure,
-            sequi, itaque eaque a ullam quibusdam hic ad optio provident alias corrupti deserunt deleniti repellat
-            animi totam vitae? Accusamus mollitia quos officia a omnis corporis hic pariatur voluptatem! Rerum aut
-            aliquid delectus eum? Ab vero exercitationem tenetur ratione minus. In ab totam ex voluptatem ea laboriosam
-            dolor nulla ut enim, consequatur quod aliquam expedita a commodi nam, eveniet tempora? Aliquam voluptate
-            molestiae tenetur, rem necessitatibus at voluptatem nemo quidem aperiam omnis ut, sequi nobis aliquid.
-            Expedita amet nisi labore dignissimos, facilis itaque iusto animi ut reiciendis modi qui eius cupiditate
-            veritatis similique tempora iste rem ullam aut at vitae adipisci possimus quis eligendi! Libero omnis, vero
-            voluptatum consectetur autem nesciunt ab fugit optio a velit veniam nam necessitatibus laborum molestiae
-            iusto quod veritatis ullam!</p>
+        <div class="container py-5">
+            <h1>設計練習作業</h1>
+            <div style="width:50%; height:350px; margin:0 auto;" class="d-flex justify-content-around align-items-center">
+                <a href="img/2018-09-03-AI-不二拉麵Mockup預覽圖V2_工作區域 1.jpg" data-aos="zoom-in" data-lightbox="image-1" data-title="不二拉麵名片">
+                    <img class="Img1 imgs1">
+                </a>
+                <a href="img/2018-09-04-AI-何誼珍美容名片-預覽圖V3_工作區域 1.jpg" data-aos="zoom-in" data-lightbox="image-1" data-title="何誼珍美容名片">
+                    <img class="Img2 imgs1">
+                </a>
+                
+                <a href="img/BlackHoleThink預覽圖V2.jpg" data-aos="zoom-in" data-lightbox="image-1" data-title="黑洞狂想">
+                    <img class="Img3 imgs1">
+                </a>
+                
+                <a href="img/2018-09-07-AI-武陵農場DM-V2-正.jpg" data-aos="zoom-in" data-lightbox="image-1" data-title="武陵農場DM正面">
+                    <img class="Img4 imgs1">
+                </a>
+                
+                <a href="img/2018-09-07-AI-武陵農場DM-V2-反.jpg" data-aos="zoom-in"  data-lightbox="image-1" data-title="武陵農場DM反面">
+                    <img class="Img5 imgs1">
+                </a>
+            </div>
+        </div>
+
 
     </div>
+
+    <div id="secion4">
+        <div class="container">
+            <h1 style="margin-bottom: 40px;">程式練習作業</h1>
+
+            <div class="d-flex justify-content-center align-items-center">
+                <h3 style="margin-right: 50px;">使用 HTML + CSS 手刻製作RWD網站</h3>
+                <a href="https://gitchenghen.github.io/fengyuan/" target="_blank">
+                    <img class="imgs1"  width="200px" src="img/2018-10-24 20-02-02 的螢幕擷圖.jpg" alt="">
+                </a>
+
+
+            </div>
+
+            <div style="margin-top: 50px;" class="d-flex justify-content-center align-items-center">  
+                <a href="https://gitchenghen.github.io/playingcards/" target="_blank">
+                    <img class="imgs1" width="200px" src="img/2018-10-24 23-49-48 play.jpg" alt="">
+                </a>
+                <h3 style="margin-right: 50px;">用 JS 渲染在網頁輸出撲克牌</h3>
+            </div>
+
+            <div style="margin: 80px 0;">
+                <h1>個人專題</h1>
+                
+                <div class="card-body flex-2">
+                    <span>用BS跟手刻混合做個人專題</span>
+                    <img class="card-img-top" data-toggle="modal" data-target="#exampleModalCenter3" style="width: 150px;" src="img/Macneth2018海報_工作區域 1.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <a href="#" class="btn btn-primary btn-success" data-toggle="modal" data-target="#exampleModalCenter3">馬克白Macneth</a>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalCenterTitle">馬克白Macneth</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="imgs1" width="100%" src="img/Macneth2018海報_工作區域 1.jpg" target="_blank" alt="馬克白Macneth">
+                            </div>
+                            <div class="modal-footer">
+                                <a href="https://gitchenghen.github.io/Macbeth2018/" target="_blank"  class="btn btn-primary">由此點去</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <div class="parallax-img3">
+        <div class="textImg3">
+            縱使面對挫折，我也會堅強活出豐富充實的人生，用心去面對多采多姿的世界，藉由雙手開創屬於自已的一片天空,為此自勉。
+        </div>>
+    </div>
+
+
 
     <!-- <div id="BackToTop">
         <a href="">Back To Top</a>
     </div> -->
 
-    <img id="BackToTop" src="img/arrow-up.svg" alt="BackToTop">
+    <img class="Btp" id="BackToTop" src="img/arrow-up.svg" alt="BackToTop">
 
     <!-- <button id="BackToTop">BackToTop</button> -->
 
-    
-    
-    
+
+
+
 
     <script>
         let BackToTop = document.querySelector("#BackToTop")
 
         BackToTop.addEventListener("click", function () {
             document.documentElement.scrollTop = 0
-
         })
 
 
 
-        // window.addEventListener("scroll", function () {
-        //     let scrollTop = document.documentElement.scrollTop
-        //     console.log(scrollTop);
-        //     let BtoT = document.querySelector(".BackToTop")
-        //     console.log(BtoT);
 
-        //     if (scrollTop > 800) {
-        //         BtoT.style.display = block;
-        //     } else {
-        //         BtoT.style.display = none;
-        //     }
-        // })
+
+            // window.addEventListener("scroll", function () {
+            //     let scrollTop = document.documentElement.scrollTop
+            //     console.log(scrollTop);
+            //     let BtoT = document.querySelector(".BackToTop")
+            //     console.log(BtoT);
+
+            //     if (scrollTop > 800) {
+            //         BtoT.style.display = block;
+            //     } else {
+            //         BtoT.style.display = none;
+            //     }
+            // })
     </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="js/lightbox.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+
+
 
 
 </body>
