@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
@@ -60,6 +63,8 @@
         }
 
         .a1 {
+            width: 120px;
+            text-align: center;
             color: rgb(255, 255, 255);
             font-size: 26px;
             text-decoration: none;
@@ -70,6 +75,7 @@
         }
 
         .a1:hover {
+            text-decoration: none;
             background-color: rgba(255, 255, 255, 0.521);
             color: black;
             border-color: black;
@@ -101,13 +107,13 @@
         .textImg2 {
             position: absolute;
             top: 50%;
-            left: 0%;
-            transform: translateY(-50%);
-            width: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* width: 100%; */
             /* height: 120px; */
             font-size: 28px;
             text-align: center;
-            line-height: 120px;
+            line-height: 50px;
             color: rgb(255, 255, 255);
             background-color: rgba(0, 108, 180, 0.253);
         }
@@ -129,6 +135,7 @@
             left: 50%;
             /* width: 130px; */
             /* height: 55px; */
+            line-height: 50px;
             font-size: 28px;
             text-align: center;
             color: rgb(255, 255, 255);
@@ -250,6 +257,14 @@
                 margin: 5px;
             }
 
+            .div2{
+                height: 350px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
 
         }
 
@@ -280,7 +295,7 @@
                 <p>
                     <h2 style="text-align:center;margin-bottom: 50px;">Hi，我的名字叫吳承翰，目前住在台中市豐原區。</h2>
                     <h3 style="text-align:center;line-height: 50px">
-                        因緣際會之下，參加上益資訊顧問公司所辦理的 RWD 網頁人才培訓職訓，希望能夠從頭學起，把網頁相關技術爬梳統整，鞏固基礎並做中學，期許自己成為一位出色的前端設計工程師。
+                        對設計有興趣，後來發現網頁更可以把想要的樣子做出來，因此參加職訓並從頭學起，把網頁相關技術爬梳統整，鞏固基礎及做中學，期許自己成為一位出色的前端設計工程師。
                     </h3>
                 </p>
             </div>
@@ -291,55 +306,58 @@
     <div id="secion2">
         <div class="container py-5">
             <h1 style="margin-bottom: 30px;">技能</h1>
-            <div class="d-flex justify-content-center align-items-center">
-                <h3>HTML</h3>
-                <div class="d-flex">
-                    <div class="round"></div>
-                    <div class="round"></div>
-                    <div class="round"></div>
-                    <div class="round"></div>
-                    <div class="no_round"></div>
+
+            <div class="d-flex justify-content-around div2">
+                <div class="d-flex justify-content-center align-items-center">
+                    <h3 style="margin-right: 10px;color: #FF5511"><i class="fab fa-html5 fa-3x"></i></h3>
+                    <div class="d-flex">
+                        <div class="round"></div>
+                        <div class="round"></div>
+                        <div class="round"></div>
+                        <div class="round"></div>
+                        <div class="no_round"></div>
+                    </div>
+
+
                 </div>
-                
-                
-            </div>
-            
-            <div class="d-flex justify-content-center align-items-center">
-                <h3>CSS</h3>
-                <div style="margin-left: 25px;" class="d-flex">
-                    <div class="round"></div>
-                    <div class="round"></div>
-                    <div class="round"></div>
-                    <div class="no_round"></div>
-                    <div class="no_round"></div>
+
+                <div class="d-flex justify-content-center align-items-center">
+                    <h3 style="margin-right: 10px;color: #000088"><i class="fab fa-css3-alt fa-3x"></i></h3>
+                    <div class="d-flex">
+                        <div class="round"></div>
+                        <div class="round"></div>
+                        <div class="round"></div>
+                        <div class="no_round"></div>
+                        <div class="no_round"></div>
+                    </div>
+
                 </div>
-                
-            </div>
-            
-            <div class="d-flex justify-content-center align-items-center">
-                <h3>JS</h3>
-                <div style="margin-left: 50px;" class="d-flex">
-                    <div class="round"></div>
-                    <div class="round"></div>
-                    <div class="no_round"></div>
-                    <div class="no_round"></div>
-                    <div class="no_round"></div>
+
+                <div class="d-flex justify-content-center align-items-center">
+                    <h3 style="margin-right: 10px;color: #EEEE00"><i class="fab fa-js fa-3x"></i></h3>
+                    <div class="d-flex">
+                        <div class="round"></div>
+                        <div class="round"></div>
+                        <div class="no_round"></div>
+                        <div class="no_round"></div>
+                        <div class="no_round"></div>
+                    </div>
+
                 </div>
-                
             </div>
-            
+
             <br>
 
             <div style="width: 40%;margin: 0 auto;" class="justify-content-center">
-                <h3 style="text-align:center">Github</h3>
-                <span>會用圖形化界面來操作GitHub Desktop用 commit & sync。</span>
+                <h3 style="text-align:center;color: #660077"><i class="fab fa-github fa-3x"></i></h3>
+                <h3 style="text-align:center;">會用 GitHub Desktop 的 commit & sync等指令。</h3>
             </div>
             
         </div>
     </div>
 
     <div class="parallax-img2">
-        <div class="textImg2">即便是聽不見，總該會有一道門隨時開著的！</div>
+        <div class="textImg2">聽不見敲門的聲音，我仍是鼓起勇氣，走向每道機會的門，而你，會願意打開嗎？</div>
     </div>
 
     <div id="secion3">
@@ -427,7 +445,7 @@
 
     <div class="parallax-img3">
         <div class="textImg3">
-            縱使面對挫折，我也會堅強活出豐富充實的人生，用心去面對多采多姿的世界，藉由雙手開創屬於自已的一片天空,為此自勉。
+            縱使面對挫折，我也會堅強活出豐富充實的人生，用心去面對多采多姿的世界，藉由雙手開創屬於自已的一片天空，為此自勉。
         </div>>
     </div>
 
