@@ -239,6 +239,12 @@
             margin: 5px;
         }
 
+        .div-border{
+            padding: 30px;
+            box-shadow: 0px 0px 40px rgba(61, 60, 60, 0.527);
+            border-radius: 20px;
+        }
+
         @media (max-width: 767.98px) {
             .textImg{
                 height: 400px;
@@ -257,10 +263,11 @@
                 margin: 5px;
             }
 
-            .div2{
-                height: 350px;
+            .div-flex{
+                height: 550px;
                 display: flex;
-                justify-content: space-around;
+                flex-direction: column;
+                justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
             }
@@ -307,8 +314,8 @@
         <div class="container py-5">
             <h1 style="margin-bottom: 30px;">技能</h1>
 
-            <div class="d-flex justify-content-around div2">
-                <div class="d-flex justify-content-center align-items-center">
+            <div style="margin-bottom: 30px;" class="d-flex justify-content-between div-flex">
+                <div data-aos="zoom-out-up" class="d-flex justify-content-center align-items-center div-border">
                     <h3 style="margin-right: 10px;color: #FF5511"><i class="fab fa-html5 fa-3x"></i></h3>
                     <div class="d-flex">
                         <div class="round"></div>
@@ -317,11 +324,9 @@
                         <div class="round"></div>
                         <div class="no_round"></div>
                     </div>
-
-
                 </div>
 
-                <div class="d-flex justify-content-center align-items-center">
+                <div data-aos="zoom-out-up" data-aos-delay="300" class="d-flex justify-content-center align-items-center div-border">
                     <h3 style="margin-right: 10px;color: #000088"><i class="fab fa-css3-alt fa-3x"></i></h3>
                     <div class="d-flex">
                         <div class="round"></div>
@@ -330,10 +335,9 @@
                         <div class="no_round"></div>
                         <div class="no_round"></div>
                     </div>
-
                 </div>
 
-                <div class="d-flex justify-content-center align-items-center">
+                <div data-aos="zoom-out-up" data-aos-delay="600" class="d-flex justify-content-center align-items-center div-border">
                     <h3 style="margin-right: 10px;color: #EEEE00"><i class="fab fa-js fa-3x"></i></h3>
                     <div class="d-flex">
                         <div class="round"></div>
@@ -342,7 +346,6 @@
                         <div class="no_round"></div>
                         <div class="no_round"></div>
                     </div>
-
                 </div>
             </div>
 
@@ -397,15 +400,20 @@
                 <a href="https://gitchenghen.github.io/fengyuan/" target="_blank">
                     <img class="imgs1"  width="200px" src="img/2018-10-24 20-02-02 的螢幕擷圖.jpg" alt="">
                 </a>
-
-
             </div>
 
-            <div style="margin-top: 50px;" class="d-flex justify-content-center align-items-center">  
+            <div style="margin: 50px 0;" class="d-flex justify-content-center align-items-center">  
                 <a href="https://gitchenghen.github.io/playingcards/" target="_blank">
                     <img class="imgs1" width="200px" src="img/2018-10-24 23-49-48 play.jpg" alt="">
                 </a>
-                <h3 style="margin-right: 50px;">用 JS 渲染在網頁輸出撲克牌</h3>
+                <h3 style="margin-left: 30px;">用 JS 渲染在網頁輸出撲克牌</h3>
+            </div>
+
+            <div style="margin: 50px 0;" class="d-flex justify-content-center align-items-center">
+                <h3 style="margin-right: 50px;">用 JS 的localStorage瀏覽器資料儲存來製作ToDoList</h3>
+                <a href="https://gitchenghen.github.io/todolist/" target="_blank">
+                    <img class="imgs1" width="200px" src="img/todolist.png" alt="">
+                </a>
             </div>
 
             <div style="margin: 80px 0;">
@@ -446,7 +454,7 @@
     <div class="parallax-img3">
         <div class="textImg3">
             縱使面對挫折，我也會堅強活出豐富充實的人生，用心去面對多采多姿的世界，藉由雙手開創屬於自已的一片天空，為此自勉。
-        </div>>
+        </div>
     </div>
 
 
@@ -461,14 +469,35 @@
 
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="js/lightbox.min.js"></script>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        let BackToTop = document.querySelector("#BackToTop")
+        AOS.init();
 
-        BackToTop.addEventListener("click", function () {
-            document.documentElement.scrollTop = 0
-        })
+        $(document).ready(function () {
+            $('#BackToTop').click(function (e) { 
+                e.preventDefault();
+                $('body,html').animate({
+                    scrollTop:0
+                },700)
+                
+            });
+        });
+
+        // let BackToTop = document.querySelector("#BackToTop")
+
+        // BackToTop.addEventListener("click", function () {
+        //     document.documentElement.scrollTop = 0
+        // })
 
 
 
@@ -486,21 +515,7 @@
             //         BtoT.style.display = none;
             //     }
             // })
-    </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
-    <script src="js/lightbox.min.js"></script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
     </script>
 
 
